@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /sample.html
+Sitemap: https://crossradiusbooks.com/sitemap.xml
