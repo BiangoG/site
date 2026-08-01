@@ -44,6 +44,14 @@ h1{font-size:2.5rem;line-height:1.12;color:var(--deep);font-weight:600;margin-bo
 footer{border-top:1px solid #DDD3C0;padding:34px 0;text-align:center;color:var(--gray);font-size:.85rem}
 footer .verse{font-style:italic;margin-bottom:8px}
 .printnote{display:none}
+[data-theme=dark]{--cream:#161210;--cream2:#211B16;--ink:#EAE2D3;--gray:#B5A896;--deep:#E6DCC8;--maroon:#D08A70;--gold:#C0A45F}
+.mode{background:none;border:1.5px solid #DDD3C0;color:var(--gray);width:34px;height:34px;cursor:pointer;font-size:.95rem;line-height:1}
+.mode:hover{border-color:var(--maroon);color:var(--maroon)}
+[data-theme=dark] .mode{border-color:#332B24}
+[data-theme=dark] header{background:rgba(22,18,16,.94);border-bottom-color:#332B24}
+[data-theme=dark] .ribbon{background:#2A1310}
+[data-theme=dark] .endcard{background:#1E1915;border-color:#332B24}
+[data-theme=dark] footer{border-top-color:#332B24}
 @media print{.chapter,.opening,.endcard,header,.ribbon,footer{display:none!important}.printnote{display:block;font-size:1.1rem;padding:60px;text-align:center}}
 @media(max-width:840px){h1{font-size:2rem}body{font-size:18px}}
 </style>
@@ -52,7 +60,7 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <div class="ribbon">Subscriber advance reading &middot; on-screen only</div>
 <header><div class="wrap"><nav>
 <a class="brand" href="index.html">KIBROM GERO GEBRE</a>
-<a class="back" href="index.html">Back to the site</a>
+<span style="display:flex;gap:10px;align-items:center"><a class="back" href="index.html">Back to the site</a><button class="mode" id="fsminus" aria-label="Smaller text">A&#8722;</button><button class="mode" id="fsplus" aria-label="Larger text">A+</button><button class="mode" id="modebtn" aria-label="Switch between dark and light">&#9790;</button></span>
 </nav></div></header>
 
 <main>
@@ -61,7 +69,7 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <h1>Chapter One</h1>
 <div class="sub">A Well Named Nopech</div>
 <div class="rule"></div>
-<p class="fromline">Read it the way the book asks to be read: a chapter at a sitting, unhurried. This is the first of thirty-two.</p>
+<p class="fromline">Read it the way the book asks to be read: a chapter at a sitting, unhurried. This is the first of thirty-two. About eighteen minutes of reading.</p>
 </div>
 
 <div class="read">
@@ -141,6 +149,12 @@ footer .verse{font-style:italic;margin-bottom:8px}
 var ch=document.getElementById('ch');
 ch.addEventListener('contextmenu',function(e){e.preventDefault()});
 ch.addEventListener('copy',function(e){e.preventDefault()});
+</script>
+<script>
+(function(){var f=[18,20,22,24],i=1;try{i=+(localStorage.getItem('crb-fs')||1)}catch(e){}function a(){document.body.style.fontSize=f[i]+'px'}a();document.getElementById('fsminus').addEventListener('click',function(){if(i>0){i--;a();try{localStorage.setItem('crb-fs',i)}catch(e){}}});document.getElementById('fsplus').addEventListener('click',function(){if(i<3){i++;a();try{localStorage.setItem('crb-fs',i)}catch(e){}}});})();
+</script>
+<script>
+(function(){var b=document.getElementById('modebtn'),r=document.documentElement,c=null;try{c=localStorage.getItem('crb-theme')}catch(e){}if(c==='dark'){r.setAttribute('data-theme','dark');if(b)b.innerHTML='&#9788;'}if(b)b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark';if(d){r.removeAttribute('data-theme');b.innerHTML='&#9790;'}else{r.setAttribute('data-theme','dark');b.innerHTML='&#9788;'}try{localStorage.setItem('crb-theme',d?'light':'dark')}catch(e){}});})();
 </script>
 </body>
 </html>

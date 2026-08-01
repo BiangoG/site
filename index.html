@@ -67,6 +67,16 @@ button.btn{cursor:pointer;background:var(--maroon);color:var(--cream);font-famil
 button.btn:hover{background:var(--deep)}
 footer{border-top:1px solid #DDD3C0;padding:34px 0;text-align:center;color:var(--gray);font-size:.85rem}
 footer .verse{font-style:italic;margin-bottom:8px}
+[data-theme=dark]{--cream:#161210;--cream2:#211B16;--ink:#EAE2D3;--gray:#B5A896;--deep:#E6DCC8;--maroon:#D08A70;--gold:#C0A45F}
+.mode{background:none;border:1.5px solid #DDD3C0;color:var(--gray);width:34px;height:34px;cursor:pointer;font-size:.95rem;line-height:1}
+.mode:hover{border-color:var(--maroon);color:var(--maroon)}
+[data-theme=dark] .mode{border-color:#332B24}
+[data-theme=dark] header{background:rgba(22,18,16,.94);border-bottom-color:#332B24}
+[data-theme=dark] .card{background:#1E1915;border-color:#332B24}
+[data-theme=dark] .photo{border-color:#332B24}
+[data-theme=dark] .gate input{background:#14100D;border-color:#4A3E33}
+[data-theme=dark] footer{border-top-color:#332B24}
+[data-theme=dark] .band{background:#2A1310}
 @media(max-width:840px){.hero,.two,.about{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}h1{font-size:2.2rem}nav ul{gap:16px}}
 </style>
 <script type="application/ld+json">
@@ -80,7 +90,7 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <body>
 <header><div class="wrap"><nav>
 <a class="brand" href="#top">KIBROM GERO GEBRE</a>
-<ul><li><a href="#book">The Book</a></li><li><a href="#inside">Inside</a></li><li><a href="#sample">First Chapter</a></li><li><a href="well.html">The Well</a></li><li><a href="#news">News</a></li><li><a href="#author">Author</a></li><li><a href="#contact">Contact</a></li></ul>
+<ul><li><a href="#book">The Book</a></li><li><a href="#inside">Inside</a></li><li><a href="#sample">First Chapter</a></li><li><a href="well.html">The Well</a></li><li><a href="quotes.html">Underlines</a></li><li><a href="#news">News</a></li><li><a href="#author">Author</a></li><li><a href="#contact">Contact</a></li><li><button class="mode" id="modebtn" aria-label="Switch between dark and light">&#9790;</button></li></ul>
 </nav></div></header>
 
 <main id="top">
@@ -150,6 +160,7 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <section id="news">
 <h2>News</h2><div class="rule"></div>
 <div class="newslist">
+<article class="card newsitem"><div class="ndate">August 2026</div><h3>Underlines, and reading after dark</h3><p>Two more rooms in the house: <a href="quotes.html" style="color:var(--maroon)">Underlines</a>, a searchable library of the book&rsquo;s most underlined lines with copy and share buttons, and a dark reading mode on every page, found beside the menu, for those who read when the lights are low.</p></article>
 <article class="card newsitem"><div class="ndate">August 2026</div><h3>The Well opens</h3><p>A new page on this site: one question from the Scriptures each week, carried for seven days before its answer opens, and a twelve-question quiz drawn from the verses the book leans on. <a href="well.html" style="color:var(--maroon)">Come and draw</a>.</p></article>
 <article class="card newsitem"><div class="ndate">August 2026</div><h3>The book is live on Amazon</h3><p><em>A Genuine Fellowship: The Cross Radius</em> is now available on Amazon in paperback and Kindle editions. The buttons above carry you straight to it.</p></article>
 <article class="card newsitem"><div class="ndate">August 2026</div><h3>Eight advance copies, eight readers</h3><p>Before publication, eight numbered advance copies went to pastors, elders, and fellow servants, with one request: test the book against the Scriptures. Their commendations will appear here as they arrive.</p></article>
@@ -192,6 +203,9 @@ footer .verse{font-style:italic;margin-bottom:8px}
 document.getElementById('sample-form').addEventListener('submit',function(e){
 if(this.action.indexOf('PASTE-MAILERLITE')>-1){e.preventDefault();window.location.href='sample.html';}
 });
+</script>
+<script>
+(function(){var b=document.getElementById('modebtn'),r=document.documentElement,c=null;try{c=localStorage.getItem('crb-theme')}catch(e){}if(c==='dark'){r.setAttribute('data-theme','dark');if(b)b.innerHTML='&#9788;'}if(b)b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark';if(d){r.removeAttribute('data-theme');b.innerHTML='&#9790;'}else{r.setAttribute('data-theme','dark');b.innerHTML='&#9788;'}try{localStorage.setItem('crb-theme',d?'light':'dark')}catch(e){}});})();
 </script>
 </body>
 </html>

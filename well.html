@@ -55,13 +55,25 @@ h2{font-size:1.7rem;color:var(--deep);font-weight:600;margin-bottom:6px}
 .hookcard .btn:hover{background:#F3E9D8;color:var(--deep)}
 footer{border-top:1px solid #DDD3C0;padding:34px 0;text-align:center;color:var(--gray);font-size:.85rem;margin-top:40px}
 footer .verse2{font-style:italic;margin-bottom:8px}
+[data-theme=dark]{--cream:#161210;--cream2:#211B16;--ink:#EAE2D3;--gray:#B5A896;--deep:#E6DCC8;--maroon:#D08A70;--gold:#C0A45F}
+.mode{background:none;border:1.5px solid #DDD3C0;color:var(--gray);width:34px;height:34px;cursor:pointer;font-size:.95rem;line-height:1}
+.mode:hover{border-color:var(--maroon);color:var(--maroon)}
+[data-theme=dark] .mode{border-color:#332B24}
+[data-theme=dark] header{background:rgba(22,18,16,.94);border-bottom-color:#332B24}
+[data-theme=dark] .card{background:#1E1915;border-color:#332B24}
+[data-theme=dark] .opt{background:#14100D;border-color:#3A3129}
+[data-theme=dark] .opt.right{background:#22301B;border-color:#7C8A4E}
+[data-theme=dark] .opt.wrong{background:#331714}
+[data-theme=dark] .hookcard{background:#2A1310}
+[data-theme=dark] .ans,[data-theme=dark] .waiting{border-top-color:#3A3129}
+[data-theme=dark] footer{border-top-color:#332B24}
 @media(max-width:840px){h1{font-size:2rem}body{font-size:18px}}
 </style>
 </head>
 <body>
 <header><div class="wrap"><nav>
 <a class="brand" href="index.html">KIBROM GERO GEBRE</a>
-<a class="back" href="index.html">Back to the site</a>
+<span style="display:flex;gap:12px;align-items:center"><a class="back" href="quotes.html">Underlines</a><a class="back" href="index.html">Back to the site</a><button class="mode" id="modebtn" aria-label="Switch between dark and light">&#9790;</button></span>
 </nav></div></header>
 
 <main>
@@ -277,6 +289,9 @@ var QUIZ = [
     document.getElementById('againbtn').addEventListener('click', function(){ i = 0; score = 0; show(); });
   }
 })();
+</script>
+<script>
+(function(){var b=document.getElementById('modebtn'),r=document.documentElement,c=null;try{c=localStorage.getItem('crb-theme')}catch(e){}if(c==='dark'){r.setAttribute('data-theme','dark');if(b)b.innerHTML='&#9788;'}if(b)b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark';if(d){r.removeAttribute('data-theme');b.innerHTML='&#9790;'}else{r.setAttribute('data-theme','dark');b.innerHTML='&#9788;'}try{localStorage.setItem('crb-theme',d?'light':'dark')}catch(e){}});})();
 </script>
 </body>
 </html>

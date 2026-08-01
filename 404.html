@@ -20,6 +20,7 @@ p{font-size:1.15rem;color:var(--gray);line-height:1.6;margin-bottom:10px}
 .btn{display:inline-block;margin-top:8px;padding:13px 28px;text-decoration:none;font-family:Poppins,sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--maroon);background:var(--maroon);color:var(--cream);transition:.2s}
 .btn:hover{background:var(--deep)}
 .small{font-family:Poppins,sans-serif;font-size:.68rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+[data-theme=dark]{--cream:#161210;--cream2:#211B16;--ink:#EAE2D3;--gray:#B5A896;--deep:#E6DCC8;--maroon:#D08A70;--gold:#C0A45F}
 </style>
 </head>
 <body>
@@ -32,5 +33,6 @@ p{font-size:1.15rem;color:var(--gray);line-height:1.6;margin-bottom:10px}
 <div class="rule"></div>
 <a class="btn" href="/">Back to the site</a>
 </div>
+<script>try{if(localStorage.getItem('crb-theme')==='dark')document.documentElement.setAttribute('data-theme','dark')}catch(e){}</script>
 </body>
 </html>
