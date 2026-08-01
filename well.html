@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Well | Weekly Questions and Scripture Quiz | Kibrom Gero Gebre</title>
+<meta name="description" content="The Well: a weekly question to carry, with the answer opening the following week, and a Scripture quiz drawn from A Genuine Fellowship: The Cross Radius by Kibrom Gero Gebre.">
+<link rel="canonical" href="https://crossradiusbooks.com/well.html">
+<meta name="theme-color" content="#F4EFE5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%237B201A' stroke-width='3'/%3E%3Cline x1='32' y1='32' x2='50' y2='18' stroke='%237B201A' stroke-width='2.5'/%3E%3Cline x1='32' y1='32' x2='32' y2='20' stroke='%235E1814' stroke-width='4'/%3E%3Cline x1='26' y1='24' x2='38' y2='24' stroke='%235E1814' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%235E1814'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F4EFE5;--cream2:#EDE6D6;--maroon:#7B201A;--deep:#5E1814;--ink:#2B2320;--gray:#5A504A;--gold:#A98A44}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--cream);color:var(--ink);font-family:'Crimson Pro',Georgia,serif;font-size:19px;line-height:1.65}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:rgba(244,239,229,.94);backdrop-filter:blur(6px);border-bottom:1px solid #DDD3C0;z-index:50}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.brand{font-family:Poppins,sans-serif;font-weight:500;letter-spacing:.22em;font-size:.82rem;color:var(--deep);text-decoration:none}
+nav a.back{color:var(--gray);text-decoration:none;font-family:Poppins,sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+nav a.back:hover{color:var(--maroon)}
+.opening{text-align:center;padding:58px 22px 12px}
+.kick{font-family:Poppins,sans-serif;font-size:.72rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+h1{font-size:2.5rem;line-height:1.12;color:var(--deep);font-weight:600;margin-bottom:10px}
+.rule{width:64px;height:2px;background:var(--gold);margin:22px auto}
+.fromline{font-style:italic;color:var(--gray);font-size:1.05rem;max-width:36rem;margin:0 auto}
+section{padding:40px 0 30px}
+h2{font-size:1.7rem;color:var(--deep);font-weight:600;margin-bottom:6px}
+.h2sub{font-family:Poppins,sans-serif;font-size:.7rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-bottom:22px}
+.card{background:#FBF8F1;border:1px solid #E4DBC8;padding:28px 30px;margin-bottom:18px}
+.wdate{font-family:Poppins,sans-serif;font-size:.66rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:10px}
+.verse{font-style:italic;color:var(--ink);margin-bottom:6px}
+.ref{font-family:Poppins,sans-serif;font-size:.7rem;letter-spacing:.16em;color:var(--maroon);margin-bottom:14px}
+.q{font-size:1.12rem;color:var(--deep);font-weight:600;margin-bottom:14px}
+.ans{border-top:1px dashed #D8CCB2;padding-top:14px;color:var(--gray)}
+.ans .alabel{font-family:Poppins,sans-serif;font-size:.64rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-bottom:8px}
+.waiting{border-top:1px dashed #D8CCB2;padding-top:14px;font-style:italic;color:var(--gray);font-size:.98rem}
+.btn{display:inline-block;padding:12px 24px;text-decoration:none;font-family:Poppins,sans-serif;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--maroon);transition:.2s;cursor:pointer;background:none;color:var(--maroon)}
+.btn.solid{background:var(--maroon);color:var(--cream)}
+.btn.solid:hover{background:var(--deep)}
+.btn.ghost:hover{background:var(--maroon);color:var(--cream)}
+.opt{display:block;width:100%;text-align:left;background:#FFFDF8;border:1.5px solid #D8CCB2;padding:13px 16px;margin-bottom:10px;font-family:'Crimson Pro',Georgia,serif;font-size:1.05rem;color:var(--ink);cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--maroon)}
+.opt.right{background:#EFF3E4;border-color:#7C8A4E}
+.opt.wrong{background:#F6E8E4;border-color:var(--maroon)}
+.opt:disabled{cursor:default}
+.qnote{font-size:.98rem;color:var(--gray);font-style:italic;margin:8px 0 14px}
+.qprog{font-family:Poppins,sans-serif;font-size:.68rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+.scorebig{font-size:2.4rem;color:var(--deep);font-weight:600;text-align:center;margin:10px 0}
+.center{text-align:center}
+.hookcard{background:var(--deep);color:#F3E9D8;padding:34px 30px;text-align:center;margin:26px 0}
+.hookcard p{max-width:32rem;margin:0 auto 16px;font-size:1.05rem}
+.hookcard .btn{border-color:#F3E9D8;color:#F3E9D8}
+.hookcard .btn:hover{background:#F3E9D8;color:var(--deep)}
+footer{border-top:1px solid #DDD3C0;padding:34px 0;text-align:center;color:var(--gray);font-size:.85rem;margin-top:40px}
+footer .verse2{font-style:italic;margin-bottom:8px}
+@media(max-width:840px){h1{font-size:2rem}body{font-size:18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="index.html">KIBROM GERO GEBRE</a>
+<a class="back" href="index.html">Back to the site</a>
+</nav></div></header>
+
+<main>
+<div class="opening">
+<div class="kick">From the pages of <em>A Genuine Fellowship</em></div>
+<h1>The Well</h1>
+<div class="rule"></div>
+<p class="fromline">A place to draw, not to hurry. One question is set here each week and carried for seven days; its answer opens the Monday after. Beneath it waits a quiz drawn from the Scriptures this book leans on.</p>
+</div>
+
+<div class="wrap">
+
+<section id="weekly">
+<h2>The Weekly Question</h2>
+<div class="h2sub">Ask on Monday &middot; the answer opens the next Monday</div>
+<div id="weeks"></div>
+</section>
+
+<section id="quiz">
+<h2>The Radius Quiz</h2>
+<div class="h2sub">Twelve questions &middot; every answer is a verse the book leans on</div>
+<div class="card" id="quizbox">
+<p style="margin-bottom:16px">Twelve questions from the wells, rivers, and roads of Scripture as this book walks them. No score is recorded anywhere; the quiz is a way of drinking, not an examination.</p>
+<button class="btn solid" id="startbtn">Begin the quiz</button>
+</div>
+</section>
+
+<div class="hookcard">
+<p>Each week&rsquo;s question can also reach you by email, together with news of the book and the books to come.</p>
+<a class="btn" href="index.html#sample">Join the readers&rsquo; list</a>
+</div>
+
+</div>
+</main>
+
+<footer>
+<div class="verse2">&ldquo;O taste and see that the LORD is good&rdquo; (Psalm 34:8)</div>
+<div>CROSS RADIUS BOOKS &middot; &copy; 2026 Kibrom Gero Gebre. All rights reserved.</div>
+</footer>
+
+<script>
+// ---------- THE WEEKLY QUESTION ----------
+// Each entry: ask = the Monday it is posed; reveal = the Monday its answer opens.
+var WEEKS = [
+ {ask:'2026-08-03', reveal:'2026-08-10',
+  verse:'&ldquo;Sir, thou hast nothing to draw with, and the well is deep.&rdquo;',
+  ref:'JOHN 4:11',
+  q:'The woman said this about Jesus. In what ways do people still say it about God today, and have you ever said it yourself?',
+  ans:'She granted that the water existed; she doubted only the access. That is the modern position exactly: some depth under reality, some rumor of living water, but no rope in sight, so we keep to our jars. The gospel&rsquo;s answer is not a longer rope of effort but the Water coming to the rim: He sat on the well&rsquo;s edge, on the thirsty side of the problem, and spoke first. Chapter One walks this whole scene.'},
+ {ask:'2026-08-10', reveal:'2026-08-17',
+  verse:'&ldquo;Whosoever drinketh of this water shall thirst again.&rdquo;',
+  ref:'JOHN 4:13',
+  q:'Jesus said this over Jacob&rsquo;s well. Name the &ldquo;water&rdquo; you have drawn from most often this year. How long does what it gives you last?',
+  ans:'Not because the water is poison; because the water is water, and you were built for something water cannot do. Career, romance, approval, the glowing jar in the pocket, even religious reputation: each is honest water and each fails honestly, a little sooner each year. The sentence is not a rebuke but a diagnosis, and it is the kindest one ever spoken over a jar.'},
+ {ask:'2026-08-17', reveal:'2026-08-24',
+  verse:'&ldquo;For my people have committed two evils; they have forsaken me the fountain of living waters, and hewed them out cisterns, broken cisterns, that can hold no water.&rdquo;',
+  ref:'JEREMIAH 2:13',
+  q:'God names two evils here, not one. Why does the second one matter so much, and which cistern has cost you the most sweat?',
+  ans:'The first evil is leaving; the second is what we do next, and notice the word hewed: cisterns are hard work. We sweat over our substitutes. A fountain gives from below, endlessly; a cistern only holds what you carry to it, and it fails from within, below the waterline, where nobody watches. The tragedy of the race is not that we are thirsty; it is where we have been digging.'},
+ {ask:'2026-08-24', reveal:'2026-08-31',
+  verse:'&ldquo;As the hart panteth after the water brooks, so panteth my soul after thee, O God.&rdquo;',
+  ref:'PSALM 42:1',
+  q:'The deer does not pant because it is defective. What does your own thirst, honestly faced, prove about how you were made?',
+  ans:'The deer pants because it is a deer, because running has spent it, and because there is such a thing in the world as a brook. Its thirst corresponds to something. So does yours. Hunger is not evidence that food is imaginary; your ache, read honestly, is the most theological thing you have ever felt: it insists you were made for Someone, the way panting insists on water.'},
+ {ask:'2026-08-31', reveal:'2026-09-07',
+  verse:'&ldquo;And a river went out of Eden to water the garden.&rdquo;',
+  ref:'GENESIS 2:10',
+  q:'We were created downstream of a river we never dug. What does that first address say about the ache you carry now?',
+  ans:'Man&rsquo;s original address was beside water he never earned: fellowship running past his door like a river. When that fellowship broke, we did not lose the need of it, only the supply; the need remained like a riverbed after the river, dry, shaped exactly like water. Your thirst is your design, bereaved: the homesickness of a race born far from its first address.'},
+ {ask:'2026-09-07', reveal:'2026-09-14',
+  verse:'&ldquo;The woman then left her waterpot.&rdquo;',
+  ref:'JOHN 4:28',
+  q:'John records this small detail on purpose. What did the abandoned jar mean, and what would leaving your own waterpot look like this week?',
+  ans:'The jar had organized her shame, her schedule, and her survival; that afternoon the management system lost its job. You do not carry a cistern home from a fountain. Leaving the waterpot is not carelessness but resignation from self-supply: the day the errand ends because the ache has found its answer. Name your jar plainly; that is where the leaving begins.'},
+ {ask:'2026-09-14', reveal:'2026-09-21',
+  verse:'&ldquo;him that cometh to me I will in no wise cast out.&rdquo;',
+  ref:'JOHN 6:37',
+  q:'This book leans on this sentence more than any other. What does &ldquo;in no wise&rdquo; close forever, and what does it open?',
+  ans:'It closes every version of the fear that you are the exception: no wording of your arriving, however late, however repeated, however ashamed, meets refusal. And it opens the door to coming back as a way of walking, not a one-time event: come back today, come back the day you fail worst and the day you are applauded most, until coming back is simply how you walk.'},
+ {ask:'2026-09-21', reveal:'2026-09-28',
+  verse:'&ldquo;But the hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth: for the Father seeketh such to worship him.&rdquo;',
+  ref:'JOHN 4:23',
+  q:'Jesus lifted the woman past both mountains to this. What argument about worship do you hide inside, and what is the thirst beneath it?',
+  ans:'She raised the old dispute about which mountain hosts true worship, and she would not be the last to hide from God inside a religious discussion. Jesus did not referee the mountains; He revealed the Father seeking worshippers. Beneath most of our arguments about the where and how of worship sits an unmet ache about the Who; grace exposes it in order to turn us toward the truth.'},
+ {ask:'2026-09-28', reveal:'2026-10-05',
+  verse:'&ldquo;All things were made by him; and without him was not any thing made that was made.&rdquo;',
+  ref:'JOHN 1:3',
+  q:'Sit with this until it astonishes you: the Maker of every aquifer sat wearied on a well&rsquo;s rim and asked a woman for a drink. What does that meeting place tell you about where He meets you?',
+  ans:'She did not meet Him on the far mountain of her theology or at the end of a climb of reformation, but at the rim, at noon, at the exact coordinates of her daily thirst. She did not ascend to the Water; the Water came to the rim. He still chooses that geometry: your ordinary route, your avoided hour, your actual thirst. Expect Him there, not somewhere holier.'},
+ {ask:'2026-10-05', reveal:'2026-10-12',
+  verse:'&ldquo;O taste and see that the LORD is good: blessed is the man that trusteth in him.&rdquo;',
+  ref:'PSALM 34:8',
+  q:'Taste is knowledge no one can hand you secondhand. What is the difference between knowing about the Lord and tasting, and which do you live on?',
+  ans:'A menu can be memorized; a meal must be eaten. Religion can carry accurate information about the fountain and still leave the soul dusty, the way a man can describe water beautifully and die thirsty. Tasting is firsthand acquaintance: prayer that is meeting, Scripture that is listening, obedience that is walking together. The invitation is not &ldquo;study and see&rdquo; but taste and see.'},
+ {ask:'2026-10-12', reveal:'2026-10-19',
+  verse:'&ldquo;and truly our fellowship is with the Father, and with his Son Jesus Christ.&rdquo;',
+  ref:'1 JOHN 1:3',
+  q:'John does not say our doctrine or our duty but our fellowship. What is the difference between serving a master and walking with a Father and a Son?',
+  ans:'A servant can be blameless and unacquainted; he can ride the whole road in the company of a Rider he has never met. Fellowship is the word for shared life: known, knowing, at home. Religion is transport; fellowship is acquaintance. The whole aim of the book, and of the life it points to, is that the sentence &ldquo;truly our fellowship is with the Father&rdquo; becomes a plain report of your ordinary week.'},
+ {ask:'2026-10-19', reveal:'2026-10-26',
+  verse:'&ldquo;And the Spirit and the bride say, Come. And let him that heareth say, Come. And let him that is athirst come. And whosoever will, let him take the water of life freely.&rdquo;',
+  ref:'REVELATION 22:17',
+  q:'Notice who joins the inviting by the second clause: the one who merely heard. Whom will you say &ldquo;Come&rdquo; to this week?',
+  ans:'The Bible ends at a well with the whole circle complete: the invited become the inviters. No credential is asked of the second voice except ears that have heard. Freely means the water is not for sale and neither is the doorway; your only qualification for passing the invitation on is that you are athirst and you came. Say the word to one person this week, and the book&rsquo;s circle closes through you.'}
+];
+
+function fmt(d){
+  var m=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return m[d.getMonth()]+' '+d.getDate()+', '+d.getFullYear();
+}
+(function(){
+  var today = new Date(); today.setHours(0,0,0,0);
+  var host = document.getElementById('weeks'), shown = 0;
+  for (var i = WEEKS.length-1; i >= 0; i--){
+    var w = WEEKS[i], ask = new Date(w.ask+'T00:00:00'), rev = new Date(w.reveal+'T00:00:00');
+    if (ask > today) continue;
+    shown++;
+    var open = today >= rev;
+    var div = document.createElement('div'); div.className = 'card';
+    div.innerHTML =
+      '<div class="wdate">Week of '+fmt(ask)+(shown===1?' &middot; this week':'')+'</div>'+
+      '<p class="verse">'+w.verse+'</p><div class="ref">'+w.ref+' &middot; KJV</div>'+
+      '<p class="q">'+w.q+'</p>'+
+      (open
+        ? '<div class="ans"><div class="alabel">The answer, opened '+fmt(rev)+'</div><p>'+w.ans+'</p></div>'
+        : '<div class="waiting">The answer opens here on '+fmt(rev)+'. Carry the question until then; the carrying is the point.</div>');
+    host.appendChild(div);
+  }
+  if (!shown){
+    var w0 = WEEKS[0];
+    host.innerHTML = '<div class="card"><div class="wdate">Beginning '+fmt(new Date(w0.ask+'T00:00:00'))+'</div>'+
+    '<p class="q">The first question is drawn and waiting. Come back on Monday; the well opens then.</p></div>';
+  }
+})();
+
+// ---------- THE RADIUS QUIZ ----------
+var QUIZ = [
+ {q:'At which well did Jesus say, &ldquo;Give me to drink&rdquo;?',
+  o:['The well of Bethlehem','Jacob’s well at Sychar','The pool of Siloam','Beer-lahai-roi'], c:1,
+  ref:'John 4:6', n:'&ldquo;Now Jacob’s well was there. Jesus therefore, being wearied with his journey, sat thus on the well.&rdquo;'},
+ {q:'At what hour did the woman of Samaria come to draw water?',
+  o:['The third hour','The sixth hour','The ninth hour','The eleventh hour'], c:1,
+  ref:'John 4:6', n:'&ldquo;And it was about the sixth hour&rdquo;: noon, the empty hour of an arranged schedule.'},
+ {q:'&ldquo;Whosoever drinketh of this water shall ______ again.&rdquo;',
+  o:['hunger','thirst','labour','return'], c:1,
+  ref:'John 4:13', n:'Not because the water is poison; because the water is water.'},
+ {q:'What did the woman leave behind when she went into the city?',
+  o:['Her sandals','Her veil','Her waterpot','Her coins'], c:2,
+  ref:'John 4:28', n:'&ldquo;The woman then left her waterpot&rdquo;: the management system lost its job that afternoon.'},
+ {q:'In Jeremiah 2:13, the people forsook the fountain and hewed out ______.',
+  o:['altars of stone','broken cisterns','graven images','new wells'], c:1,
+  ref:'Jeremiah 2:13', n:'&ldquo;Broken cisterns, that can hold no water.&rdquo; Cisterns are hard work; we sweat over our substitutes.'},
+ {q:'&ldquo;As the hart panteth after the ______, so panteth my soul after thee, O God.&rdquo;',
+  o:['still waters','water brooks','morning dew','deep rivers'], c:1,
+  ref:'Psalm 42:1', n:'The deer&rsquo;s thirst corresponds to something. So does yours.'},
+ {q:'&ldquo;And a river went out of ______ to water the garden.&rdquo;',
+  o:['Havilah','Assyria','Eden','Canaan'], c:2,
+  ref:'Genesis 2:10', n:'We were created downstream: fellowship ran past our first door like a river nobody dug.'},
+ {q:'&ldquo;him that cometh to me I will in no wise ______.&rdquo;',
+  o:['forget','cast out','condemn','forsake'], c:1,
+  ref:'John 6:37', n:'The sentence this book leans on more than any other. There is no version of your arriving that He refuses.'},
+ {q:'&ldquo;All things were made by ______; and without him was not any thing made that was made.&rdquo;',
+  o:['wisdom','him','the word of kings','the fathers'], c:1,
+  ref:'John 1:3', n:'The Maker of every aquifer sat wearied on a well&rsquo;s rim and asked for a drink.'},
+ {q:'True worshippers shall worship the Father in ______.',
+  o:['Jerusalem only','spirit and in truth','fear and trembling','songs and feasts'], c:1,
+  ref:'John 4:23', n:'He lifted her past both mountains to the highest subject a soul can be handed.'},
+ {q:'&ldquo;And truly our fellowship is with the Father, and with his Son ______.&rdquo;',
+  o:['Jesus Christ','forever','in glory','by faith'], c:0,
+  ref:'1 John 1:3', n:'Not our doctrine, not our duty: our fellowship. That word is the whole aim of the book.'},
+ {q:'&ldquo;And let him that heareth say, ______.&rdquo;',
+  o:['Amen','Come','Behold','Rejoice'], c:1,
+  ref:'Revelation 22:17', n:'The invited become the inviters; that is the whole circle in one verse.'}
+];
+
+(function(){
+  var box = document.getElementById('quizbox'), i = 0, score = 0;
+  document.getElementById('startbtn').addEventListener('click', show);
+  function show(){
+    var it = QUIZ[i];
+    var h = '<div class="qprog">Question '+(i+1)+' of '+QUIZ.length+'</div><p class="q">'+it.q+'</p>';
+    for (var k = 0; k < it.o.length; k++) h += '<button class="opt" data-k="'+k+'">'+it.o[k]+'</button>';
+    h += '<div id="fb"></div>';
+    box.innerHTML = h;
+    var opts = box.querySelectorAll('.opt');
+    for (var j = 0; j < opts.length; j++) opts[j].addEventListener('click', pick);
+  }
+  function pick(e){
+    var k = +e.currentTarget.getAttribute('data-k'), it = QUIZ[i];
+    var opts = box.querySelectorAll('.opt');
+    for (var j = 0; j < opts.length; j++){ opts[j].disabled = true; }
+    opts[it.c].className = 'opt right';
+    if (k === it.c){ score++; } else { e.currentTarget.className = 'opt wrong'; }
+    var fb = document.getElementById('fb');
+    fb.innerHTML = '<p class="qnote">'+it.n+' &middot; <strong>'+it.ref+'</strong></p>'+
+      '<button class="btn solid" id="nextbtn">'+(i+1 < QUIZ.length ? 'Next question' : 'See the result')+'</button>';
+    document.getElementById('nextbtn').addEventListener('click', function(){
+      i++;
+      if (i < QUIZ.length) show(); else done();
+    });
+  }
+  function done(){
+    var word;
+    if (score === 12) word = 'Full marks. Now the harder joy: from knowing the verses to walking with their Author.';
+    else if (score >= 9) word = 'Well drawn. The verses know you; keep walking with their Author.';
+    else if (score >= 6) word = 'A good drink. Every verse you missed is waiting for you in the book, in its own chapter.';
+    else word = 'The well is deep, and that is no shame. Every one of these verses lives in the book; come and draw.';
+    box.innerHTML = '<div class="center"><div class="qprog">The Radius Quiz</div>'+
+      '<div class="scorebig">'+score+' of '+QUIZ.length+'</div>'+
+      '<p style="max-width:30rem;margin:0 auto 20px;color:var(--gray)">'+word+'</p>'+
+      '<button class="btn ghost" id="againbtn" style="margin-right:10px">Take it again</button>'+
+      '<a class="btn solid" href="https://www.amazon.com/dp/B0HBWKH235" target="_blank" rel="noopener">Get the book</a></div>';
+    document.getElementById('againbtn').addEventListener('click', function(){ i = 0; score = 0; show(); });
+  }
+})();
+</script>
+</body>
+</html>
