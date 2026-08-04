@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kibrom Gero Gebre | Author of A Genuine Fellowship: The Cross Radius | Cross Radius Books</title>
 <link rel="canonical" href="https://crossradiusbooks.com/">
+<link rel="alternate" hreflang="en" href="https://crossradiusbooks.com/">
+<link rel="alternate" hreflang="am" href="https://crossradiusbooks.com/am.html">
 <meta name="description" content="Kibrom Gero Gebre is the author of A Genuine Fellowship: The Cross Radius. Official site of Kibrom Gero Gebre and Cross Radius Books: the book, the author, and news of coming books.">
 <meta name="author" content="Kibrom Gero Gebre">
 <meta property="og:title" content="Kibrom Gero Gebre | A Genuine Fellowship: The Cross Radius">
@@ -29,8 +31,8 @@ body{background:var(--cream);color:var(--ink);font-family:'Crimson Pro',Georgia,
 header{position:sticky;top:0;background:rgba(244,239,229,.94);backdrop-filter:blur(6px);border-bottom:1px solid #DDD3C0;z-index:50}
 nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
 .brand{font-family:Poppins,sans-serif;font-weight:500;letter-spacing:.22em;font-size:.82rem;color:var(--deep);text-decoration:none}
-nav ul{display:flex;gap:26px;list-style:none}
-nav a{color:var(--gray);text-decoration:none;font-family:Poppins,sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+nav ul{display:flex;gap:17px;list-style:none;flex-wrap:wrap;align-items:center}
+nav a{color:var(--gray);text-decoration:none;font-family:Poppins,sans-serif;font-size:.73rem;letter-spacing:.12em;text-transform:uppercase}
 nav a:hover{color:var(--maroon)}
 .hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:72px 0 84px}
 .hero img{width:100%;max-width:400px;box-shadow:0 24px 60px rgba(60,35,25,.28);justify-self:center}
@@ -65,6 +67,15 @@ h2{font-size:2rem;color:var(--deep);margin-bottom:10px;font-weight:600}
 .gate input:focus{outline:none;border-color:var(--maroon)}
 button.btn{cursor:pointer;background:var(--maroon);color:var(--cream);font-family:Poppins,sans-serif}
 button.btn:hover{background:var(--deep)}
+.htxt{position:relative;z-index:0}
+.htxt::before,.htxt::after{content:"";position:absolute;left:40%;top:45%;width:60px;height:60px;margin:-30px 0 0 -30px;border:1.5px solid var(--gold);border-radius:50%;opacity:0;animation:ring 8s linear infinite;pointer-events:none;z-index:-1}
+.htxt::after{animation-delay:4s;border-color:var(--maroon)}
+@keyframes ring{0%{transform:scale(.35);opacity:0}10%{opacity:.32}100%{transform:scale(5.4);opacity:0}}
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.rv.in{opacity:1;transform:none}
+.card{transition:transform .18s ease,border-color .18s ease}
+.card:hover{transform:translateY(-3px);border-color:var(--maroon)}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.htxt::before,.htxt::after{animation:none;display:none}.card:hover{transform:none}}
 footer{border-top:1px solid #DDD3C0;padding:34px 0;text-align:center;color:var(--gray);font-size:.85rem}
 footer .verse{font-style:italic;margin-bottom:8px}
 [data-theme=dark]{--cream:#161210;--cream2:#211B16;--ink:#EAE2D3;--gray:#B5A896;--deep:#E6DCC8;--maroon:#D08A70;--gold:#C0A45F}
@@ -90,12 +101,12 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <body>
 <header><div class="wrap"><nav>
 <a class="brand" href="#top">KIBROM GERO GEBRE</a>
-<ul><li><a href="#book">The Book</a></li><li><a href="#inside">Inside</a></li><li><a href="#sample">First Chapter</a></li><li><a href="well.html">The Well</a></li><li><a href="quotes.html">Underlines</a></li><li><a href="#news">News</a></li><li><a href="#author">Author</a></li><li><a href="#contact">Contact</a></li><li><button class="mode" id="modebtn" aria-label="Switch between dark and light">&#9790;</button></li></ul>
+<ul><li><a href="#book">The Book</a></li><li><a href="#sample">First Chapter</a></li><li><a href="well.html">The Well</a></li><li><a href="quiz.html">Quizzes</a></li><li><a href="answers.html">Answers</a></li><li><a href="writings.html">Writings</a></li><li><a href="quotes.html">Underlines</a></li><li><a href="am.html">&#4768;&#4635;&#4653;&#4763;</a></li><li><button class="mode" id="modebtn" aria-label="Switch between dark and light">&#9790;</button></li></ul>
 </nav></div></header>
 
 <main id="top">
 <div class="wrap"><div class="hero">
-<div>
+<div class="htxt">
 <div class="kick">The debut book</div>
 <h1>A Genuine Fellowship</h1>
 <div class="sub">The Cross Radius</div>
@@ -160,6 +171,7 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <section id="news">
 <h2>News</h2><div class="rule"></div>
 <div class="newslist">
+<article class="card newsitem"><div class="ndate">August 2026</div><h3>The house grows: quizzes in levels, answers, writings, and Amharic</h3><p>Four new rooms. <a href="quiz.html" style="color:var(--maroon)">The Radius Quizzes</a> now climb in levels, from the book and from the whole Bible. <a href="answers.html" style="color:var(--maroon)">Answers from the Well</a> takes up the questions believers actually search. <a href="writings.html" style="color:var(--maroon)">Writings</a> opens the author&rsquo;s desk. And the door now reads <a href="am.html" style="color:var(--maroon)">&#4768;&#4635;&#4653;&#4763;</a> as well.</p></article>
 <article class="card newsitem"><div class="ndate">August 2026</div><h3>Underlines, and reading after dark</h3><p>Two more rooms in the house: <a href="quotes.html" style="color:var(--maroon)">Underlines</a>, a searchable library of the book&rsquo;s most underlined lines with copy and share buttons, and a dark reading mode on every page, found beside the menu, for those who read when the lights are low.</p></article>
 <article class="card newsitem"><div class="ndate">August 2026</div><h3>The Well opens</h3><p>A new page on this site: one question from the Scriptures each week, carried for seven days before its answer opens, and a twelve-question quiz drawn from the verses the book leans on. <a href="well.html" style="color:var(--maroon)">Come and draw</a>.</p></article>
 <article class="card newsitem"><div class="ndate">August 2026</div><h3>The book is live on Amazon</h3><p><em>A Genuine Fellowship: The Cross Radius</em> is now available on Amazon in paperback and Kindle editions. The buttons above carry you straight to it.</p></article>
@@ -198,6 +210,7 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <footer>
 <div class="verse">&ldquo;and truly our fellowship is with the Father, and with his Son Jesus Christ&rdquo; (1 John 1:3)</div>
 <div>CROSS RADIUS BOOKS &middot; &copy; 2026 Kibrom Gero Gebre. All rights reserved.</div>
+<div style="margin-top:10px;font-size:.78rem"><a href="#book" style="color:var(--gray)">The Book</a> &middot; <a href="#sample" style="color:var(--gray)">First Chapter</a> &middot; <a href="well.html" style="color:var(--gray)">The Well</a> &middot; <a href="quiz.html" style="color:var(--gray)">Quizzes</a> &middot; <a href="answers.html" style="color:var(--gray)">Answers</a> &middot; <a href="writings.html" style="color:var(--gray)">Writings</a> &middot; <a href="quotes.html" style="color:var(--gray)">Underlines</a> &middot; <a href="#news" style="color:var(--gray)">News</a> &middot; <a href="#author" style="color:var(--gray)">Author</a> &middot; <a href="#contact" style="color:var(--gray)">Contact</a> &middot; <a href="am.html" style="color:var(--gray)">&#4768;&#4635;&#4653;&#4763;</a></div>
 </footer>
 <script>
 document.getElementById('sample-form').addEventListener('submit',function(e){
@@ -206,6 +219,9 @@ if(this.action.indexOf('PASTE-MAILERLITE')>-1){e.preventDefault();window.locatio
 </script>
 <script>
 (function(){var b=document.getElementById('modebtn'),r=document.documentElement,c=null;try{c=localStorage.getItem('crb-theme')}catch(e){}if(c==='dark'){r.setAttribute('data-theme','dark');if(b)b.innerHTML='&#9788;'}if(b)b.addEventListener('click',function(){var d=r.getAttribute('data-theme')==='dark';if(d){r.removeAttribute('data-theme');b.innerHTML='&#9790;'}else{r.setAttribute('data-theme','dark');b.innerHTML='&#9788;'}try{localStorage.setItem('crb-theme',d?'light':'dark')}catch(e){}});})();
+</script>
+<script>
+(function(){var els=document.querySelectorAll('section,.band,.newsitem,.grid3 .card');if(!('IntersectionObserver' in window)){return}var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});for(var i=0;i<els.length;i++){els[i].classList.add('rv');io.observe(els[i])}})();
 </script>
 </body>
 </html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bible Quizzes | The Radius Quiz | Kibrom Gero Gebre</title>
+<meta name="description" content="Free Bible quizzes in levels: questions from A Genuine Fellowship: The Cross Radius and general Scripture quizzes from Genesis to Revelation. Pass a level to open the next.">
+<link rel="canonical" href="https://crossradiusbooks.com/quiz.html">
+<meta name="theme-color" content="#F4EFE5">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='26' fill='none' stroke='%237B201A' stroke-width='3'/%3E%3Cline x1='32' y1='32' x2='50' y2='18' stroke='%237B201A' stroke-width='2.5'/%3E%3Cline x1='32' y1='32' x2='32' y2='20' stroke='%235E1814' stroke-width='4'/%3E%3Cline x1='26' y1='24' x2='38' y2='24' stroke='%235E1814' stroke-width='4'/%3E%3Ccircle cx='32' cy='32' r='3' fill='%235E1814'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#F4EFE5;--cream2:#EDE6D6;--maroon:#7B201A;--deep:#5E1814;--ink:#2B2320;--gray:#5A504A;--gold:#A98A44;--cardbg:#FBF8F1;--cardbd:#E4DBC8;--hairline:#DDD3C0;--optbg:#FFFDF8;--optbd:#D8CCB2}
+[data-theme=dark]{--cream:#161210;--cream2:#211B16;--ink:#EAE2D3;--gray:#B5A896;--deep:#E6DCC8;--maroon:#D08A70;--gold:#C0A45F;--cardbg:#1E1915;--cardbd:#332B24;--hairline:#332B24;--optbg:#14100D;--optbd:#3A3129}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--cream);color:var(--ink);font-family:'Crimson Pro',Georgia,serif;font-size:19px;line-height:1.65;transition:background .25s}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:0;background:var(--cream);border-bottom:1px solid var(--hairline);z-index:50}
+nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:10px}
+.brand{font-family:Poppins,sans-serif;font-weight:500;letter-spacing:.22em;font-size:.82rem;color:var(--deep);text-decoration:none}
+.navr{display:flex;align-items:center;gap:14px}
+nav a.back{color:var(--gray);text-decoration:none;font-family:Poppins,sans-serif;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase}
+nav a.back:hover{color:var(--maroon)}
+.mode{background:none;border:1.5px solid var(--hairline);color:var(--gray);width:34px;height:34px;cursor:pointer;font-size:.95rem;line-height:1}
+.mode:hover{border-color:var(--maroon);color:var(--maroon)}
+.opening{text-align:center;padding:54px 22px 10px}
+.kick{font-family:Poppins,sans-serif;font-size:.72rem;letter-spacing:.3em;color:var(--gold);text-transform:uppercase;margin-bottom:18px}
+h1{font-size:2.5rem;line-height:1.12;color:var(--deep);font-weight:600;margin-bottom:10px}
+.rule{width:64px;height:2px;background:var(--gold);margin:22px auto}
+.fromline{font-style:italic;color:var(--gray);font-size:1.05rem;max-width:36rem;margin:0 auto}
+section{padding:34px 0 8px}
+h2{font-size:1.6rem;color:var(--deep);font-weight:600;margin-bottom:6px}
+.h2sub{font-family:Poppins,sans-serif;font-size:.7rem;letter-spacing:.24em;color:var(--gold);text-transform:uppercase;margin-bottom:20px}
+.lvlgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px;margin-bottom:10px}
+.lvl{background:var(--cardbg);border:1px solid var(--cardbd);padding:20px 22px;cursor:pointer;transition:.18s;text-align:left}
+.lvl:hover{border-color:var(--maroon);transform:translateY(-2px)}
+.lvl.locked{opacity:.55;cursor:default}
+.lvl.locked:hover{border-color:var(--cardbd);transform:none}
+.lvlno{font-family:Poppins,sans-serif;font-size:.62rem;letter-spacing:.22em;color:var(--gold);text-transform:uppercase;margin-bottom:6px}
+.lvlname{font-size:1.12rem;color:var(--deep);font-weight:600;margin-bottom:6px}
+.lvlstat{font-family:Poppins,sans-serif;font-size:.66rem;letter-spacing:.12em;color:var(--gray);text-transform:uppercase}
+.lvlstat .done{color:#7C8A4E}
+.card{background:var(--cardbg);border:1px solid var(--cardbd);padding:28px 30px;margin-bottom:18px}
+.btn{display:inline-block;padding:12px 24px;text-decoration:none;font-family:Poppins,sans-serif;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;border:1.5px solid var(--maroon);transition:.2s;cursor:pointer;background:none;color:var(--maroon)}
+.btn.solid{background:var(--maroon);color:var(--cream)}
+.btn.solid:hover{background:var(--deep)}
+.btn.ghost:hover{background:var(--maroon);color:var(--cream)}
+.opt{display:block;width:100%;text-align:left;background:var(--optbg);border:1.5px solid var(--optbd);padding:13px 16px;margin-bottom:10px;font-family:'Crimson Pro',Georgia,serif;font-size:1.05rem;color:var(--ink);cursor:pointer;transition:.15s}
+.opt:hover{border-color:var(--maroon)}
+.opt.right{background:#EFF3E4;border-color:#7C8A4E;color:#2B2320}
+.opt.wrong{background:#F6E8E4;border-color:var(--maroon);color:#2B2320}
+[data-theme=dark] .opt.right{background:#22301B;color:#EAE2D3}
+[data-theme=dark] .opt.wrong{background:#331714;color:#EAE2D3}
+.opt:disabled{cursor:default}
+.qnote{font-size:.98rem;color:var(--gray);font-style:italic;margin:8px 0 14px}
+.qprog{font-family:Poppins,sans-serif;font-size:.68rem;letter-spacing:.2em;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+.scorebig{font-size:2.4rem;color:var(--deep);font-weight:600;text-align:center;margin:10px 0}
+.center{text-align:center}
+.note{font-size:.92rem;color:var(--gray);font-style:italic;margin-top:8px}
+footer{border-top:1px solid var(--hairline);padding:34px 0;text-align:center;color:var(--gray);font-size:.85rem;margin-top:40px}
+footer .verse2{font-style:italic;margin-bottom:8px}
+@media(max-width:840px){h1{font-size:2rem}body{font-size:18px}}
+@media(prefers-reduced-motion:reduce){.lvl:hover{transform:none}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a class="brand" href="index.html">KIBROM GERO GEBRE</a>
+<div class="navr">
+<a class="back" href="well.html">The Well</a>
+<a class="back" href="index.html">Back to the site</a>
+<button class="mode" id="modebtn" aria-label="Switch between dark and light">&#9790;</button>
+</div>
+</nav></div></header>
+
+<main>
+<div class="opening">
+<div class="kick">The Radius Quizzes</div>
+<h1>Draw, and Keep Drawing</h1>
+<div class="rule"></div>
+<p class="fromline">Two wells to draw from. Take a level of ten questions; reach eight to open the next. Your progress is remembered on this device, and no score is sent anywhere: the quiz is a way of drinking, not an examination.</p>
+</div>
+
+<div class="wrap">
+
+<section>
+<h2>From the Book</h2>
+<div class="h2sub">The verses A Genuine Fellowship leans on</div>
+<div class="lvlgrid" id="grid-book"></div>
+<p class="note">More book levels will be drawn as the well fills. Suggest one through the contact page.</p>
+</section>
+
+<section>
+<h2>General Bible</h2>
+<div class="h2sub">From Genesis to the Letters &middot; five levels</div>
+<div class="lvlgrid" id="grid-gen"></div>
+</section>
+
+<div class="card" id="quizbox" style="display:none"></div>
+
+</div>
+</main>
+
+<footer>
+<div class="verse2">&ldquo;O taste and see that the LORD is good&rdquo; (Psalm 34:8)</div>
+<div>CROSS RADIUS BOOKS &middot; &copy; 2026 Kibrom Gero Gebre. All rights reserved. &middot; <a href="index.html" style="color:var(--gray)">Home</a> &middot; <a href="well.html" style="color:var(--gray)">The Well</a> &middot; <a href="quotes.html" style="color:var(--gray)">Underlines</a></div>
+</footer>
+
+<script>
+var TRACKS = {
+ book: {name:'From the Book', levels:[
+  {name:'The Ground: the Wells of the Book', qs:[
+   {q:'At which well did Jesus say, &ldquo;Give me to drink&rdquo;?', o:['The well of Bethlehem','Jacob&rsquo;s well at Sychar','The pool of Siloam','Beer-lahai-roi'], c:1, ref:'John 4:6', n:'&ldquo;Now Jacob&rsquo;s well was there. Jesus therefore, being wearied with his journey, sat thus on the well.&rdquo;'},
+   {q:'At what hour did the woman of Samaria come to draw water?', o:['The third hour','The sixth hour','The ninth hour','The eleventh hour'], c:1, ref:'John 4:6', n:'&ldquo;And it was about the sixth hour&rdquo;: noon, the empty hour of an arranged schedule.'},
+   {q:'&ldquo;Whosoever drinketh of this water shall ______ again.&rdquo;', o:['hunger','thirst','labour','return'], c:1, ref:'John 4:13', n:'Not because the water is poison; because the water is water.'},
+   {q:'What did the woman leave behind when she went into the city?', o:['Her sandals','Her veil','Her waterpot','Her coins'], c:2, ref:'John 4:28', n:'&ldquo;The woman then left her waterpot&rdquo;: the management system lost its job that afternoon.'},
+   {q:'In Jeremiah 2:13, the people forsook the fountain and hewed out ______.', o:['altars of stone','broken cisterns','graven images','new wells'], c:1, ref:'Jeremiah 2:13', n:'&ldquo;Broken cisterns, that can hold no water.&rdquo; Cisterns are hard work; we sweat over our substitutes.'},
+   {q:'&ldquo;As the hart panteth after the ______, so panteth my soul after thee, O God.&rdquo;', o:['still waters','water brooks','morning dew','deep rivers'], c:1, ref:'Psalm 42:1', n:'The deer&rsquo;s thirst corresponds to something. So does yours.'},
+   {q:'&ldquo;And a river went out of ______ to water the garden.&rdquo;', o:['Havilah','Assyria','Eden','Canaan'], c:2, ref:'Genesis 2:10', n:'We were created downstream: fellowship ran past our first door like a river nobody dug.'},
+   {q:'&ldquo;him that cometh to me I will in no wise ______.&rdquo;', o:['forget','cast out','condemn','forsake'], c:1, ref:'John 6:37', n:'The sentence the book leans on more than any other. There is no version of your arriving that He refuses.'},
+   {q:'&ldquo;All things were made by ______; and without him was not any thing made that was made.&rdquo;', o:['wisdom','him','the word of kings','the fathers'], c:1, ref:'John 1:3', n:'The Maker of every aquifer sat wearied on a well&rsquo;s rim and asked for a drink.'},
+   {q:'True worshippers shall worship the Father in ______.', o:['Jerusalem only','spirit and in truth','fear and trembling','songs and feasts'], c:1, ref:'John 4:23', n:'He lifted her past both mountains to the highest subject a soul can be handed.'},
+   {q:'&ldquo;And truly our fellowship is with the Father, and with his Son ______.&rdquo;', o:['Jesus Christ','forever','in glory','by faith'], c:0, ref:'1 John 1:3', n:'Not our doctrine, not our duty: our fellowship. That word is the whole aim of the book.'},
+   {q:'&ldquo;And let him that heareth say, ______.&rdquo;', o:['Amen','Come','Behold','Rejoice'], c:1, ref:'Revelation 22:17', n:'The invited become the inviters; that is the whole circle in one verse.'}
+  ]}
+ ]},
+ gen: {name:'General Bible', levels:[
+  {name:'The Ground: Beginnings', qs:[
+   {q:'&ldquo;In the beginning God created the ______ and the earth.&rdquo;', o:['light','heaven','waters','garden'], c:1, ref:'Genesis 1:1', n:'The Bible&rsquo;s first sentence.'},
+   {q:'On which day did God rest from all His work?', o:['The fifth day','The sixth day','The seventh day','The first day'], c:2, ref:'Genesis 2:2', n:'&ldquo;And he rested on the seventh day from all his work which he had made.&rdquo;'},
+   {q:'Who said, &ldquo;Am I my brother&rsquo;s keeper?&rdquo;', o:['Adam','Cain','Abel','Lamech'], c:1, ref:'Genesis 4:9', n:'Cain, after the field.'},
+   {q:'How many of each clean beast did Noah take into the ark?', o:['Two','Five','Seven','Twelve'], c:2, ref:'Genesis 7:2', n:'&ldquo;Of every clean beast thou shalt take to thee by sevens.&rdquo; The pairs were for the unclean.'},
+   {q:'What sign did God set in the cloud as His covenant with Noah?', o:['A star','A bow','A dove','A flame'], c:1, ref:'Genesis 9:13', n:'&ldquo;I do set my bow in the cloud.&rdquo;'},
+   {q:'Abram&rsquo;s name was changed to Abraham, meaning he would be ______.', o:['a prince with God','a father of many nations','a friend of kings','a man of the covenant'], c:1, ref:'Genesis 17:5', n:'&ldquo;For a father of many nations have I made thee.&rdquo;'},
+   {q:'What did God provide on the mountain in place of Isaac?', o:['A bullock','A ram caught in a thicket','A dove','A lamb from the flock'], c:1, ref:'Genesis 22:13', n:'The ram was caught by its horns; the LORD provided.'},
+   {q:'Jacob&rsquo;s new name after wrestling until the breaking of the day was ______.', o:['Ephraim','Israel','Jeshurun','Peniel'], c:1, ref:'Genesis 32:28', n:'&ldquo;Thy name shall be called no more Jacob, but Israel.&rdquo;'},
+   {q:'Who was sold by his brothers and later fed them in Egypt?', o:['Benjamin','Judah','Joseph','Reuben'], c:2, ref:'Genesis 37; 45', n:'&ldquo;Ye thought evil against me; but God meant it unto good.&rdquo; (Genesis 50:20)'},
+   {q:'Where did God speak to Moses out of the burning bush?', o:['Mount Carmel','Mount Horeb','Mount Nebo','Mount Zion'], c:1, ref:'Exodus 3:1-2', n:'Horeb, the mountain of God: the bush burned and was not consumed.'}
+  ]},
+  {name:'The Road: Exodus and the Law', qs:[
+   {q:'How many plagues fell upon Egypt?', o:['Seven','Nine','Ten','Twelve'], c:2, ref:'Exodus 7-12', n:'The last was the death of the firstborn, the night of the passover.'},
+   {q:'What was struck on the doorposts so the destroyer would pass over?', o:['Oil','Water','Blood of the lamb','Ashes'], c:2, ref:'Exodus 12:13', n:'&ldquo;When I see the blood, I will pass over you.&rdquo;'},
+   {q:'Which sea did Israel cross on dry ground?', o:['The Great Sea','The Red Sea','The Sea of Galilee','The Dead Sea'], c:1, ref:'Exodus 14:22', n:'The waters were a wall on the right hand and on the left.'},
+   {q:'What bread fell from heaven in the wilderness?', o:['Shewbread','Manna','Unleavened bread','Barley loaves'], c:1, ref:'Exodus 16:15', n:'&ldquo;It is manna: for they wist not what it was.&rdquo;'},
+   {q:'On which mountain were the Ten Commandments given?', o:['Sinai','Nebo','Hermon','Moriah'], c:0, ref:'Exodus 19-20', n:'The mountain smoked, and the LORD spoke.'},
+   {q:'The first commandment: &ldquo;Thou shalt have no other ______ before me.&rdquo;', o:['kings','gods','altars','fears'], c:1, ref:'Exodus 20:3', n:'The whole law begins at the Center.'},
+   {q:'What did Moses lift up in the wilderness so the bitten could look and live?', o:['His rod','A serpent of brass','The ark','A lamp'], c:1, ref:'Numbers 21:9', n:'Jesus took this very picture for Himself in John 3:14.'},
+   {q:'Who followed Moses as leader and brought Israel over Jordan?', o:['Caleb','Aaron','Joshua','Gideon'], c:2, ref:'Joshua 1:1-2', n:'&ldquo;As I was with Moses, so I will be with thee.&rdquo;'},
+   {q:'The walls of which city fell after seven days of compassing?', o:['Ai','Jericho','Gibeon','Hebron'], c:1, ref:'Joshua 6:20', n:'The people shouted, and the wall fell down flat.'},
+   {q:'&ldquo;As for me and my house, we will ______ the LORD,&rdquo; said Joshua.', o:['fear','serve','seek','praise'], c:1, ref:'Joshua 24:15', n:'A whole household set at the Center.'}
+  ]},
+  {name:'The Kings and the Prophets', qs:[
+   {q:'Who killed Goliath with a sling and a stone?', o:['Saul','Jonathan','David','Samuel'], c:2, ref:'1 Samuel 17:49-50', n:'&ldquo;The battle is the LORD&rsquo;s.&rdquo;'},
+   {q:'&ldquo;The LORD is my shepherd; I shall not ______.&rdquo;', o:['fear','fall','want','wander'], c:2, ref:'Psalm 23:1', n:'David&rsquo;s psalm of the Shepherd.'},
+   {q:'Which king asked God for an understanding heart and built the temple?', o:['David','Solomon','Hezekiah','Josiah'], c:1, ref:'1 Kings 3:9; 6:1', n:'Wisdom first, then the house.'},
+   {q:'On which mountain did Elijah face the prophets of Baal?', o:['Carmel','Sinai','Tabor','Gilboa'], c:0, ref:'1 Kings 18:19-39', n:'&ldquo;The God that answereth by fire, let him be God.&rdquo;'},
+   {q:'After the wind, the earthquake, and the fire, God spoke to Elijah in ______.', o:['thunder','a still small voice','a vision of angels','a pillar of cloud'], c:1, ref:'1 Kings 19:12', n:'The LORD was not in the noise that day.'},
+   {q:'Who was carried up to heaven by a whirlwind?', o:['Enoch','Moses','Elijah','Isaiah'], c:2, ref:'2 Kings 2:11', n:'A chariot of fire, and horses of fire, parted them asunder.'},
+   {q:'Naaman the Syrian was told to wash how many times in Jordan?', o:['Three','Seven','Ten','Twelve'], c:1, ref:'2 Kings 5:10', n:'His flesh came again like the flesh of a little child.'},
+   {q:'Who was cast into the den of lions and found without hurt in the morning?', o:['Shadrach','Daniel','Meshach','Jeremiah'], c:1, ref:'Daniel 6:16-23', n:'&ldquo;My God hath sent his angel, and hath shut the lions&rsquo; mouths.&rdquo;'},
+   {q:'What swallowed Jonah when he fled from the presence of the LORD?', o:['A whale, so named','A great fish','A leviathan','The deep itself'], c:1, ref:'Jonah 1:17', n:'&ldquo;Now the LORD had prepared a great fish to swallow up Jonah.&rdquo;'},
+   {q:'&ldquo;But they that wait upon the LORD shall renew their ______.&rdquo;', o:['days','strength','songs','vows'], c:1, ref:'Isaiah 40:31', n:'They shall mount up with wings as eagles.'}
+  ]},
+  {name:'The Gospels', qs:[
+   {q:'In which town was Jesus born?', o:['Nazareth','Bethlehem','Capernaum','Jerusalem'], c:1, ref:'Matthew 2:1', n:'The city of David, as the prophet had written.'},
+   {q:'Who baptized Jesus in the Jordan?', o:['Peter','Andrew','John the Baptist','Philip'], c:2, ref:'Matthew 3:13', n:'And a voice from heaven said, &ldquo;This is my beloved Son.&rdquo;'},
+   {q:'How many disciples did Jesus choose?', o:['Seven','Ten','Twelve','Seventy'], c:2, ref:'Luke 6:13', n:'Whom also he named apostles.'},
+   {q:'With how many loaves and fishes did Jesus feed the five thousand?', o:['Seven loaves, two fishes','Five loaves, two fishes','Three loaves, five fishes','Twelve loaves, one fish'], c:1, ref:'John 6:9-13', n:'And twelve baskets remained: heaven&rsquo;s arithmetic.'},
+   {q:'The shortest verse in the English Bible reads: &ldquo;Jesus ______.&rdquo;', o:['wept','prayed','slept','waited'], c:0, ref:'John 11:35', n:'At the grave of Lazarus, before He called him out.'},
+   {q:'Who denied Jesus three times before the cock crew?', o:['Judas','Thomas','Peter','James'], c:2, ref:'Luke 22:61', n:'And later, by another fire, the Lord restored him three times.'},
+   {q:'Where was Jesus crucified?', o:['Gethsemane','Golgotha','Bethany','Emmaus'], c:1, ref:'John 19:17', n:'The place of a skull. The cross stood there; the radius was drawn there.'},
+   {q:'On which day did Jesus rise from the dead?', o:['The same day','The second day','The third day','The seventh day'], c:2, ref:'Luke 24:46', n:'&ldquo;Thus it behoved Christ to suffer, and to rise from the dead the third day.&rdquo;'},
+   {q:'To which village were the two walking when the risen Jesus drew near?', o:['Bethsaida','Emmaus','Cana','Jericho'], c:1, ref:'Luke 24:13-15', n:'&ldquo;Did not our heart burn within us, while he talked with us by the way?&rdquo;'},
+   {q:'&ldquo;I am the way, the truth, and the ______.&rdquo;', o:['door','life','light','vine'], c:1, ref:'John 14:6', n:'&ldquo;No man cometh unto the Father, but by me.&rdquo;'}
+  ]},
+  {name:'The Church and the Letters', qs:[
+   {q:'On which day did the Spirit come with a rushing mighty wind?', o:['The Passover','The day of Pentecost','The Sabbath','The feast of tabernacles'], c:1, ref:'Acts 2:1-2', n:'And they were all filled with the Holy Ghost.'},
+   {q:'Who was struck by a light on the road to Damascus?', o:['Stephen','Philip','Saul','Barnabas'], c:2, ref:'Acts 9:3-4', n:'&ldquo;Saul, Saul, why persecutest thou me?&rdquo;'},
+   {q:'&ldquo;Now faith is the ______ of things hoped for, the evidence of things not seen.&rdquo;', o:['promise','substance','shadow','beginning'], c:1, ref:'Hebrews 11:1', n:'The Bible&rsquo;s own definition of faith.'},
+   {q:'The fruit of the Spirit begins: &ldquo;love, joy, ______...&rdquo;', o:['peace','hope','power','patience'], c:0, ref:'Galatians 5:22', n:'&ldquo;But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.&rdquo;'},
+   {q:'&ldquo;And now abideth faith, hope, charity, these three; but the greatest of these is ______.&rdquo;', o:['faith','hope','charity','wisdom'], c:2, ref:'1 Corinthians 13:13', n:'Charity: love, in the old dress of the King James.'},
+   {q:'&ldquo;For by ______ are ye saved through faith; and that not of yourselves.&rdquo;', o:['works','grace','law','mercy and works'], c:1, ref:'Ephesians 2:8', n:'&ldquo;It is the gift of God: not of works, lest any man should boast.&rdquo;'},
+   {q:'What piece of the whole armour of God quenches the fiery darts?', o:['The helmet of salvation','The shield of faith','The breastplate of righteousness','The sword of the Spirit'], c:1, ref:'Ephesians 6:16', n:'Above all, taking the shield of faith.'},
+   {q:'&ldquo;Behold, I stand at the ______, and knock.&rdquo;', o:['gate','door','well','altar'], c:1, ref:'Revelation 3:20', n:'&ldquo;If any man hear my voice, and open the door, I will come in to him, and will sup with him.&rdquo;'},
+   {q:'&ldquo;I am Alpha and ______, the beginning and the ending, saith the Lord.&rdquo;', o:['the End','Omega','the Last','the Amen'], c:1, ref:'Revelation 1:8', n:'The first and last letters of the Greek alphabet: He spans the whole alphabet of history.'},
+   {q:'The Bible ends with an invitation: &ldquo;And let him that is athirst ______.&rdquo;', o:['wait','come','drink','rest'], c:1, ref:'Revelation 22:17', n:'The last page of the Book and the first page of this book meet at the same well.'}
+  ]}
+ ]}
+};
+var PASS = 8;
+var progress = {};
+try { progress = JSON.parse(localStorage.getItem('crb-quiz') || '{}'); } catch(e) {}
+
+function key(t, l){ return t + '-' + l; }
+function best(t, l){ return progress[key(t, l)] || 0; }
+function unlocked(t, l){ return l === 0 || best(t, l-1) >= PASS; }
+
+function renderGrids(){
+  ['book','gen'].forEach(function(t){
+    var host = document.getElementById('grid-' + (t === 'book' ? 'book' : 'gen'));
+    host.innerHTML = '';
+    TRACKS[t].levels.forEach(function(lv, i){
+      var un = unlocked(t, i), b = best(t, i), n = lv.qs.length;
+      var d = document.createElement('button');
+      d.className = 'lvl' + (un ? '' : ' locked');
+      d.innerHTML = '<div class="lvlno">Level ' + (i+1) + (un ? '' : ' &middot; locked') + '</div>' +
+        '<div class="lvlname">' + lv.name + '</div>' +
+        '<div class="lvlstat">' + (b >= PASS ? '<span class="done">Passed &middot; best ' + b + '/' + n + '</span>'
+          : (b > 0 ? 'Best ' + b + '/' + n + ' &middot; need ' + PASS : (un ? n + ' questions &middot; need ' + PASS + ' to pass' : 'Pass the level before it'))) + '</div>';
+      if (un) d.addEventListener('click', function(){ start(t, i); });
+      host.appendChild(d);
+    });
+  });
+}
+
+var cur = null;
+function start(t, l){
+  cur = { t: t, l: l, i: 0, score: 0, qs: TRACKS[t].levels[l].qs };
+  var box = document.getElementById('quizbox');
+  box.style.display = 'block';
+  show();
+  box.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function show(){
+  var box = document.getElementById('quizbox'), it = cur.qs[cur.i];
+  var h = '<div class="qprog">' + TRACKS[cur.t].name + ' &middot; Level ' + (cur.l+1) + ' &middot; Question ' + (cur.i+1) + ' of ' + cur.qs.length + ' &middot; ' + cur.score + ' right</div>' +
+          '<p style="font-size:1.12rem;color:var(--deep);font-weight:600;margin-bottom:14px">' + it.q + '</p>';
+  for (var k = 0; k < it.o.length; k++) h += '<button class="opt" data-k="' + k + '">' + it.o[k] + '</button>';
+  h += '<div id="fb"></div>';
+  box.innerHTML = h;
+  var opts = box.querySelectorAll('.opt');
+  for (var j = 0; j < opts.length; j++) opts[j].addEventListener('click', pick);
+}
+function pick(e){
+  var k = +e.currentTarget.getAttribute('data-k'), it = cur.qs[cur.i];
+  var box = document.getElementById('quizbox'), opts = box.querySelectorAll('.opt');
+  for (var j = 0; j < opts.length; j++) opts[j].disabled = true;
+  opts[it.c].className = 'opt right';
+  if (k === it.c) cur.score++; else e.currentTarget.className = 'opt wrong';
+  document.getElementById('fb').innerHTML =
+    '<p class="qnote">' + it.n + ' &middot; <strong>' + it.ref + '</strong></p>' +
+    '<button class="btn solid" id="nextbtn">' + (cur.i+1 < cur.qs.length ? 'Next question' : 'See the result') + '</button>';
+  document.getElementById('nextbtn').addEventListener('click', function(){
+    cur.i++;
+    if (cur.i < cur.qs.length) show(); else done();
+  });
+}
+function done(){
+  var box = document.getElementById('quizbox'), n = cur.qs.length, passed = cur.score >= PASS;
+  var k = key(cur.t, cur.l);
+  if (cur.score > (progress[k] || 0)){ progress[k] = cur.score; try { localStorage.setItem('crb-quiz', JSON.stringify(progress)); } catch(e) {} }
+  var last = cur.l + 1 >= TRACKS[cur.t].levels.length;
+  var word = passed
+    ? (last ? 'The track is finished. The verses know your name now; keep walking with their Author.'
+            : 'The gate opens: the next level is unlocked below.')
+    : 'Not yet ' + PASS + ', and no shame in it: the well is deep. Every verse you missed is now one you have met.';
+  box.innerHTML = '<div class="center"><div class="qprog">' + TRACKS[cur.t].name + ' &middot; Level ' + (cur.l+1) + '</div>' +
+    '<div class="scorebig">' + cur.score + ' of ' + n + '</div>' +
+    '<p style="max-width:30rem;margin:0 auto 20px;color:var(--gray)">' + word + '</p>' +
+    '<button class="btn ghost" id="againbtn" style="margin-right:10px">Take it again</button>' +
+    (passed && !last ? '<button class="btn solid" id="nextlvl" style="margin-right:10px">Next level</button>' : '') +
+    '<a class="btn solid" href="https://www.amazon.com/dp/B0HBWKH235" target="_blank" rel="noopener">Get the book</a></div>';
+  renderGrids();
+  document.getElementById('againbtn').addEventListener('click', function(){ start(cur.t, cur.l); });
+  var nx = document.getElementById('nextlvl');
+  if (nx) nx.addEventListener('click', function(){ start(cur.t, cur.l + 1); });
+}
+renderGrids();
+
+(function(){
+  var b = document.getElementById('modebtn'), r = document.documentElement, c = null;
+  try { c = localStorage.getItem('crb-theme'); } catch(e) {}
+  if (c === 'dark'){ r.setAttribute('data-theme','dark'); if (b) b.innerHTML = '&#9788;'; }
+  if (b) b.addEventListener('click', function(){
+    var d = r.getAttribute('data-theme') === 'dark';
+    if (d){ r.removeAttribute('data-theme'); b.innerHTML = '&#9790;'; }
+    else { r.setAttribute('data-theme','dark'); b.innerHTML = '&#9788;'; }
+    try { localStorage.setItem('crb-theme', d ? 'light' : 'dark'); } catch(e) {}
+  });
+})();
+</script>
+</body>
+</html>

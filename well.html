@@ -94,10 +94,10 @@ footer .verse2{font-style:italic;margin-bottom:8px}
 
 <section id="quiz">
 <h2>The Radius Quiz</h2>
-<div class="h2sub">Twelve questions &middot; every answer is a verse the book leans on</div>
-<div class="card" id="quizbox">
-<p style="margin-bottom:16px">Twelve questions from the wells, rivers, and roads of Scripture as this book walks them. No score is recorded anywhere; the quiz is a way of drinking, not an examination.</p>
-<button class="btn solid" id="startbtn">Begin the quiz</button>
+<div class="h2sub">Now in levels &middot; from the book and from the whole Bible</div>
+<div class="card">
+<p style="margin-bottom:16px">The quiz has grown into its own page: two wells to draw from, the book&rsquo;s verses and the whole Bible, in levels that unlock as you pass. Your progress is remembered on your device.</p>
+<a class="btn solid" href="quiz.html">Open the quizzes</a>
 </div>
 </section>
 
@@ -251,7 +251,7 @@ var QUIZ = [
 
 (function(){
   var box = document.getElementById('quizbox'), i = 0, score = 0;
-  document.getElementById('startbtn').addEventListener('click', show);
+  var sb=document.getElementById('startbtn'); if(sb) sb.addEventListener('click', show);
   function show(){
     var it = QUIZ[i];
     var h = '<div class="qprog">Question '+(i+1)+' of '+QUIZ.length+'</div><p class="q">'+it.q+'</p>';
