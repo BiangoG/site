@@ -195,7 +195,9 @@ footer .verse{font-style:italic;margin-bottom:8px}
 <div class="card">
 <h3>The opening chapter, free for subscribers</h3>
 <p>Enter your email and you will be taken straight to the reading page.</p>
-<form class="gate" id="sample-form" action="PASTE-MAILERLITE-FORM-ACTION-HERE" method="post" target="_self">
+<form class="gate" id="sample-form" action="https://assets.mailerlite.com/jsonp/2561943/forms/195137530393265805/subscribe" method="post" target="_self">
+<input type="hidden" name="ml-submit" value="1">
+<input type="hidden" name="anticsrf" value="true">
 <input type="email" name="fields[email]" autocomplete="email" required placeholder="Your email address" aria-label="Your email address">
 <button class="btn" type="submit">Open the chapter</button>
 </form>
@@ -251,7 +253,16 @@ footer .verse{font-style:italic;margin-bottom:8px}
 </footer>
 <script>
 document.getElementById('sample-form').addEventListener('submit',function(e){
-if(this.action.indexOf('PASTE-MAILERLITE')>-1){e.preventDefault();window.location.href='sample.html';}
+e.preventDefault();
+var f=this,b=f.querySelector('button'),gone=false;
+if(b){b.disabled=true;b.textContent='Opening the chapter...';}
+var done=function(){if(!gone){gone=true;window.location.href='sample.html';}};
+try{
+var body=new URLSearchParams();
+new FormData(f).forEach(function(v,k){body.append(k,v);});
+fetch(f.action,{method:'POST',body:body}).then(done,done);
+setTimeout(done,2500);
+}catch(err){done();}
 });
 </script>
 <script>
